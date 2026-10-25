@@ -1,0 +1,14 @@
+# Credentials: never commit
+firmware/hurudza/secrets.h
+secrets.h
+
+# Build output
+.pio/
+build/
+*.bin
+*.elf
+test_modbus
+
+# Editors / OS
+.vscode/
+.DS_Store

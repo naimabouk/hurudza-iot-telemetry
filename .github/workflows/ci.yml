@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  host-tests:
+    name: Modbus unit tests (host)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and run
+        run: |
+          g++ -std=c++17 -Wall -Wextra -Werror -Ifirmware/hurudza tests/host/test_modbus.cpp -o test_modbus
+          ./test_modbus
+
+  firmware-build:
+    name: ESP32 firmware build (PlatformIO)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install PlatformIO
+        run: pip install platformio
+      - name: Build with placeholder secrets
+        working-directory: firmware
+        run: |
+          cp hurudza/secrets.example.h hurudza/secrets.h
+          pio run -e esp32dev
