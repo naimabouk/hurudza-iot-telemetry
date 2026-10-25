@@ -26,7 +26,7 @@ AI-based decision support for farmers.
 - [Telemetry and dashboards](#telemetry-and-dashboards)
 - [Getting started](#getting-started)
 - [Repository structure](#repository-structure)
-- [Team and recognition](#team-and-recognition)
+- [Recognition](#recognition)
 
 ## System architecture
 
@@ -189,11 +189,7 @@ hurudza-iot-telemetry/
 └── .github/workflows/ci.yml
 ```
 
-## Team and recognition
-
-<!-- TODO: fill in team members and roles -->
-Hurudza was developed by **[TEAM NAME / MEMBERS]**.
-**Naima Boukhiar**: [ROLE, e.g. embedded firmware, sensor integration, PCB design].
+## Recognition
 
 **Huawei Developer Competition 2024: winner, Northern Africa region.**
 
